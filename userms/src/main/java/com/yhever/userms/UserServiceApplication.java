@@ -23,6 +23,7 @@ public class UserServiceApplication {
     @Value("${server.port}")
     String port;
     @RequestMapping("/welcome")
+    @ResponseBody
     public String welcome(@RequestParam String name) {
         return "hi "+name+",i am from port:" +port;
     }
